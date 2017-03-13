@@ -154,6 +154,19 @@ target_link_libraries(
     rpg_open_remode_cuda
 )
 
+## Offline tum.
+add_executable(
+    tum_main
+    test/tum_main.cpp
+    test/dataset.cpp
+)
+
+target_link_libraries(
+    tum_main
+    rpg_open_remode
+    rpg_open_remode_cuda
+)
+
 # GTest
 if(BUILD_TESTS)
 enable_testing()
